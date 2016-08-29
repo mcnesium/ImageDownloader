@@ -24,4 +24,5 @@ if [ ${URL: -97:1} == "#" ]; then
 	$JAVA -jar $IMAGE_DOWNLOADER $URL | feh -. -
 else
    $BROWSER $URL
+fi
 ```
