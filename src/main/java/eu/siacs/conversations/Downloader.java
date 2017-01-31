@@ -27,11 +27,13 @@ public class Downloader {
                 connection.connect();
                 byte[] buffer = new byte[4096];
                 int count;
-				while ((count = inputStream.read(buffer)) != -1) {
-					os.write(buffer, 0, count);
-				}
+                while ((count = inputStream.read(buffer)) != -1) {
+                    os.write(buffer, 0, count);
+                }
+                os.flush();
+                os.close();
             } catch (Exception e) {
-                System.err.println("could not connect to host "+e.getMessage());
+                System.err.println("could not connect to host " + e.getMessage());
             }
         }
     }
