@@ -15,9 +15,13 @@ import java.net.URL;
 
 public class Downloader {
 
+    static {
+        URL.setURLStreamHandlerFactory(new AesGcmURLStreamHandlerFactory());
+    }
+
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.err.println("Usage: java -jar ImageDownloader.jar https://url.tld/filename#C0FFEBABE");
+            System.err.println("Usage: java -jar ImageDownloader.jar aesgcm://url.tld/filename#C0FFEBABE");
         } else {
             try {
                 final URL url = new URL(args[0]);
