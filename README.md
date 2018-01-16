@@ -5,7 +5,7 @@ The anchor is made of 96 characters which represent 48 bytes in HEX. The first 1
 
 The encryption mode is ```aes-gcm```. The authentcation tag of 16 bytes is appended to the file.
 
-This Java project provides sample code on how to download and dercypt a file. Output is to stdout. Redirect to file or pipe to image viewer.
+This Java project provides sample code on how to download and decrypt a file. Output is to stdout. Redirect to file or pipe to image viewer.
 
 Compile with ```mvn package```
 
